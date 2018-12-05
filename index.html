@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<!--[if lt IE 9 ]><html class="no-js oldie" lang="en"> <![endif]-->
+<!--[if IE 9 ]><html class="no-js oldie ie9" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<html class="no-js" lang="en">
+<!--<![endif]-->
+
+<head>
+
+    <!--- basic page needs
+    ================================================== -->
+    <meta charset="utf-8">
+    <title>La casa de la memoria</title>
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- mobile specific metas
+    ================================================== -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- CSS
+    ================================================== -->
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/vendor.css">
+    <link rel="stylesheet" href="css/main.css">
+
+
+    <!-- script
+    ================================================== -->
+    <script src="js/modernizr.js"></script>
+    <script src="js/pace.min.js"></script>
+
+    <!-- favicons
+    ================================================== -->
+    <link rel="icon"   href="img/icono.png" type="image/png" >
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+
+</head>
+
+<body id="top">
+
+    <!-- header
+    ================================================== -->
+    <header class="s-header">
+
+        <div class="header-logo">
+            <a class="site-logo" href="index.html">
+                <img src="img/icono.png" alt="Homepage">
+            </a>
+        </div>
+
+        <nav class="header-nav">
+
+            <a href="#0" class="header-nav__close" title="close"><span>Close</span></a>
+
+            <div class="header-nav__content">
+                <h3>Menu</h3>
+                
+                <ul class="header-nav__list">
+                    <li class="current"><a class="smoothscroll"  href="#home" title="home">Home</a></li>
+                    <li><a class="smoothscroll"  href="#about" title="about">Ingresar</a></li>
+                    <li><a class="smoothscroll"  href="#services" title="services">Mostrar</a></li>
+                    <li><a class="smoothscroll"  href="#works" title="works">Actualizar</a></li>
+
+                </ul>
+    
+                <p>nuestra biblioteca <br>
+                     <h3>La casa de la memoria</h3></p>
+    
+
+            </div> <!-- end header-nav__content -->
+
+        </nav>  <!-- end header-nav -->
+
+        <a class="header-menu-toggle" href="#0">
+            <span class="header-menu-text">Menu</span>
+            <span class="header-menu-icon"></span>
+        </a>
+
+    </header> <!-- end s-header -->
+
+
+    <!-- home
+    ================================================== -->
+    <section id="home" class="s-home target-section" data-parallax="scroll" data-image-src="img/biblioteca.jpg" data-natural-width=3000 data-natural-height=2000 data-position-y=center>
+
+        <div class="overlay"></div>
+        <div class="shadow-overlay"></div>
+
+        <div class="home-content">
+
+            <div class="row home-content__main">
+
+                <h3>Bienvendio a nuestra biblioteca</h3>
+
+                <h1>
+                   La casa de la memoria <br>
+                    donde recordaras 
+                   hasta los recuerdos <br>
+                    mas antiguos
+                </h1>
+
+            </div>
+
+            <div class="home-content__scroll">
+                <a href="#about" class="scroll-link smoothscroll">
+                    <span>Bajar</span>
+                </a>
+            </div>
+
+            <div class="home-content__line"></div>
+
+        </div> <!-- end home-content -->
+
+        <!-- end home-social -->
+
+    </section> <!-- end s-home -->
+
+
+    <!-- ingresar lector, trabajadores, libro, 
+    ================================================== -->
+    <section id='about' class="s-about">
+
+        <div class="row section-header has-bottom-sep" data-aos="fade-up">
+            <div class="col-full">
+                <h3 class="subhead subhead--dark">Ingresar</h3>
+                <h1 class="display-1 display-1--light">Ingrese Lector</h1>
+            </div>
+        </div> <!-- end section-header -->
+
+        <div class="row about-desc" data-aos="fade-up">
+            <div class="col-full">
+                <article>
+                    <center> <table>
+                        <tr>
+                        <td>
+                        <h2>datos</h2>
+                        <form action="./recibe.php" method="POST">
+                        <input type="text" name="nombre"
+                        placeholder="ingrese nombre"><br>
+                        <input type="text" name="libro"
+                        placeholder="ingrese nombre del libro"><br>
+                        <input type="text" name="dia"
+                        placeholder="ingrese dias de prestamo"><br>
+                        <br>
+                        <input type="radio" name="genero" value="Masculino">Masculino 
+                        <input type="radio" name="genero" value="Femenino">Femenino 
+                        <input type="radio" name="genero" value="Otro">Otro <br>
+                        </td>
+                        <td>
+                        <h2>Ingrese Categoria del libro</h2>
+                        <input type="checkbox" name="actividades[]" 
+                        value="aventura">Aventura<br>
+                        <input type="checkbox" name="actividades[]" 
+                        value="romance">Romance<br>
+                        <input type="checkbox" name="actividades[]" 
+                        value="suspenso">suspenso<br>
+                        <input type="checkbox" name="actividades[]" 
+                        value="terror">terror<br>
+                        </td>
+                        </tr>
+                        <tr>
+                        <td>
+                        <h2>Ingrese comentario sobre el libro </h2>
+                        <textarea name="comentario" cols="30" rows="10">
+                        </textarea><br>
+                        <button type="submit" name="Enviar">Enviar</button>
+                        <button type="reset">Limpiar</button>
+                        </td>
+                        <td>
+                        <img src="img/icono.png" width="200" alt="">
+                        </td>
+                        </tr>
+                        </table></center>
+        
+                        </form>
+                    </article>
+
+
+                    <!--Ingresar empleado -->
+                    <div class="row section-header has-bottom-sep" data-aos="fade-up">
+                        <div class="col-full">
+                            <h3 class="subhead subhead--dark">Ingresar</h3>
+                            <h1 class="display-1 display-1--light">Ingrese Empleado</h1>
+                        </div>
+                    </div> <!-- end section-header -->
+            
+                    <div class="row about-desc" data-aos="fade-up">
+                        <div class="col-full">
+                    <article>
+                        <center> <table>
+            
+                            <tr>
+                                <td>
+                                        <h2>datos</h2>
+                                        <form action="./recibeempleado.php" method="POST">
+                                            <input type="text" name="id"
+                                            placeholder="ingrese id"><br>
+                            
+                                            <input type="text" name="nombre"
+                                            placeholder="ingrese nombre"><br>
+                        <br>
+                                            <input type="radio" name="genero" value="Masculino">Masculino 
+                                            <input type="radio" name="genero" value="Femenino">Femenino 
+                                            <input type="radio" name="genero" value="Otro">Otro <br>
+            
+                                </td>
+                                <td>
+                                        <h2>Ingrese Cargo</h2>
+
+                                        <input type="radio" name="cargo" value="administrador">Administrador <br>
+                                        <input type="radio" name="cargo" value="bodeguero">Bodeguero <br> 
+                                        <input type="radio" name="cargo" value="cajero">Cajero <br>
+                                        <input type="radio" name="cargo" value="Mantenedor">Mantenedor <br>
+                    
+
+                                </td>
+                                <td >
+                   
+                                    <img src="img/icono.png" width="200" alt="">
+                                        
+                                       
+                                    </td>
+
+                            </tr>
+                            <tr>
+                                <td>
+
+                                    <button type="submit">Enviar</button>
+                                <button type="reset">Limpiar</button>
+                                     
+                            </td>
+                            </tr>
+            <tr>
+
+            
+            
+            </tr>
+            </table></center>
+            
+                            </form>
+                        </article>
+                     <!--Ingresar libro -->
+
+                     <div class="row section-header has-bottom-sep" data-aos="fade-up">
+                        <div class="col-full">
+                            <h3 class="subhead subhead--dark">Ingresar</h3>
+                            <h1 class="display-1 display-1--light">Ingrese Libro</h1>
+                        </div>
+                    </div> <!-- end section-header -->
+                     <article>
+                        <center> <table>
+            
+                            <tr>
+                                <td>
+                                        <h2>datos</h2>
+                                        <form action="./recibelibro.php" method="POST">
+                                            <input type="text" name="id"
+                                            placeholder="ingrese id"><br>
+                            
+                                            <input type="text" name="nombre"
+                                            placeholder="ingrese nombre"><br>
+
+                                            <input type="text" name="stock"
+                                            placeholder="stock libro"><br>
+
+
+                        
+                        <br>
+                                            <input type="radio" name="estado" value="buen estado">Buen estado 
+                                            <input type="radio" name="estado" value="mal estado">Mal estado
+                                            <input type="radio" name="estado" value="otro">Otro <br>
+            
+                                </td>
+                               
+                                <td>
+                                    <td>
+                                        <h2>Ingrese comentario sobre el libro </h2>
+                                        <textarea name="comentario" cols="50" rows="10">
+                                        </textarea><br>
+                                        <button type="submit">Enviar</button>
+                                    <button type="reset">Limpiar</button>
+                                         
+                                </td>
+                                </td>
+                            </tr>
+         
+            </table></center>
+            
+                            </form>
+                        </article>
+            </div>
+        </div> <!-- end about-desc -->
+
+
+        <div class="about__line"></div>
+
+    </section> <!-- end s-about -->
+
+
+    <!-- services
+    ================================================== -->
+    <section id='services' class="s-services">
+
+        <div class="row section-header has-bottom-sep" data-aos="fade-up">
+            <div class="col-full">
+                
+                <h1 class="display-2">Mostrar Lector</h1>
+
+                	<div>
+                        <a href="verdatos.php"></a>
+                        <button type="submit">Mostrar Lector</button>
+			
+                                        
+                    </div>			
+				
+                    <a href="mostrar.php"></a>
+				
+                    <center><input type="submit" value="Mostrar Empleado" class="submit" /></center>
+                    				
+					<a href="mostrar.php"></a>
+				
+                    <center><input type="submit" value="Mostrar Libros" class="submit" /></center>
+            </div>
+        </div> <!-- end section-header -->
+
+        <div class="row services-list block-1-2 block-tab-full">
+
+   
+        
+
+    
+
+
+        </div> <!-- end services-list -->
+
+    </section> <!-- end s-services -->
+
+
+    <!-- works
+    ================================================== -->
+    <section id='works' class="s-works">
+
+        <div class="intro-wrap">
+                
+            <div class="row section-header has-bottom-sep light-sep" data-aos="fade-up">
+                <div class="col-full">
+                    
+                    <h1 class="display-2 display-2--light">Actualizar</h1>
+                </div>
+       
+                <a href="actualizar.php"></a>
+				
+                <center><input type="submit" value="actualizar Lector" class="submit" /></center>
+                                
+                <a href="actualizar.php"></a>
+            
+                <center><input type="submit" value="actualizar Empleado" class="submit" /></center>
+                                
+                <a href="actualizar.php"></a>
+            
+                <center><input type="submit" value="actualizar Libros" class="submit" /></center>
+    </section> 
+
+
+
+
+
+    <!-- footer
+    ================================================== -->
+   
+    <!-- photoswipe background
+    ================================================== -->
+    <div aria-hidden="true" class="pswp" role="dialog" tabindex="-1">
+
+        <div class="pswp__bg"></div>
+        <div class="pswp__scroll-wrap">
+
+            <div class="pswp__container">
+                <div class="pswp__item"></div>
+                <div class="pswp__item"></div>
+                <div class="pswp__item"></div>
+            </div>
+
+            <div class="pswp__ui pswp__ui--hidden">
+                <div class="pswp__top-bar">
+                    <div class="pswp__counter"></div><button class="pswp__button pswp__button--close" title="Close (Esc)"></button> <button class="pswp__button pswp__button--share" title=
+                    "Share"></button> <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button> <button class="pswp__button pswp__button--zoom" title=
+                    "Zoom in/out"></button>
+                    <div class="pswp__preloader">
+                        <div class="pswp__preloader__icn">
+                            <div class="pswp__preloader__cut">
+                                <div class="pswp__preloader__donut"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                    <div class="pswp__share-tooltip"></div>
+                </div><button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)"></button> <button class="pswp__button pswp__button--arrow--right" title=
+                "Next (arrow right)"></button>
+                <div class="pswp__caption">
+                    <div class="pswp__caption__center"></div>
+                </div>
+            </div>
+
+        </div>
+
+    </div> <!-- end photoSwipe background -->
+
+
+    <!-- preloader
+    ================================================== -->
+    <div id="preloader">
+        <div id="loader">
+            <div class="line-scale-pulse-out">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Java Script
+    ================================================== -->
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/plugins.js"></script>
+    <script src="js/main.js"></script>
+
+</body>
+
+</html>
