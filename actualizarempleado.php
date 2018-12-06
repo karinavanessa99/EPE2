@@ -9,7 +9,7 @@
 <script>
 </script>
 
-<title>Actualizar Lectores</title>
+<title>Actualizar Empleados</title>
 
 <body style="background-color:#CCFFFF">
 
@@ -17,7 +17,7 @@
 <?php
 error_reporting(E_ALL ^ E_NOTICE);
 
-$n = $_REQUEST["rut"];
+$n = $_REQUEST["id"];
 
 
 
@@ -37,12 +37,13 @@ echo "conexion exitosa";
 </article>
 
 <?php
-         $sql =  "UPDATE lector set nombre='$nombre',
-		 libro = '$libro' where rut = '$rut'";
+         $sql =  "UPDATE libro set nombre='$nombre',
+     genero = '$genero', cargo ='$cargo' where id_e = '$id_e'";
 
         if($conexion -> query($sql) == TRUE){
-
-            echo "Datos actualizados!!";
+            echo'<script>
+            alert("Datos actualizados")
+            </script>';
         }else{
             echo "Error: ".$sql. " ".$conexion->error;
         }
@@ -52,7 +53,7 @@ echo "conexion exitosa";
    
     
 
-<form action="actualizarlector.php" method="POST" >
+<form action="actualizarem.php" method="POST" >
 
 
 
@@ -62,7 +63,7 @@ echo "conexion exitosa";
 	
     <ul>
        
-        <center><li><h2>Actualizacion de Lector</h2></li></center>
+        <center><li><h2>Actualizacion de Empleado</h2></li></center>
 	</ul>
     <br class="clearfloat" />
     
@@ -81,22 +82,23 @@ echo "conexion exitosa";
                         <tr>
 						
                             <td>
-							Rut<input type="text" required name = "rut" 
-					placeholder = "ingrese rut a modificar"></td>
+							ID<input type="text" required name = "id" 
+					placeholder = "ingrese id a modificar"></td>
 					<td>
-					Nombre Lector
+					Nombre libro
 					<input type="text" id="nombre"  
 					required name="nombre" value="
-					<?php echo $fila['nombre']; ?>"  />
+					<?php echo $row['nombre']; ?>"  />
 					</td>
-								
-					<td>
-					Nuevo Libro
-					<input type="text"  required name="libro"
-				 id="libro" value="<?php echo $fila['libro']; ?>" />
-                    
-                               
-					</td>
+				
+                    <td>
+                    Nuevo estado    
+                    <input type="text"  required name="genero"
+				 id="genero" value="<?php echo $row['genero']; ?>" /></td>
+                    <td>
+                    Comentario    
+                    <input type="text"  required name="cargo"
+				 id="cargo" value="<?php echo $row['cargo']; ?>" /></td>
 				
 
                         </tr>
@@ -115,10 +117,10 @@ echo "conexion exitosa";
 		    <tr>
 					<td colspan="4" align="center">
 			     	<center><input type="submit" value="Actualizar" class="submit" /></center>
-				   </td>
-				   <td>
-				   <button><a href="index.html">volver</a></button>
-				   </td>
+                   </td>
+                   <td>
+                   <button><a href="index.html">volver</a></button>
+                   </td>
 			</tr>
 			</article>
 

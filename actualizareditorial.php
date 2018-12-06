@@ -9,7 +9,7 @@
 <script>
 </script>
 
-<title>Actualizar Lectores</title>
+<title>Actualizar Editorial </title>
 
 <body style="background-color:#CCFFFF">
 
@@ -17,7 +17,7 @@
 <?php
 error_reporting(E_ALL ^ E_NOTICE);
 
-$n = $_REQUEST["rut"];
+$id_edit = $_REQUEST["id_edit "];
 
 
 
@@ -37,12 +37,13 @@ echo "conexion exitosa";
 </article>
 
 <?php
-         $sql =  "UPDATE lector set nombre='$nombre',
-		 libro = '$libro' where rut = '$rut'";
+         $sql =  "UPDATE editorial set nombre='$nombre',
+         direccion = '$direccion', telefono = '$telefono' where id_edit  = '$id_edit '";
 
         if($conexion -> query($sql) == TRUE){
-
-            echo "Datos actualizados!!";
+            echo'<script>
+            alert("Datos actualizados")
+            </script>';
         }else{
             echo "Error: ".$sql. " ".$conexion->error;
         }
@@ -52,7 +53,7 @@ echo "conexion exitosa";
    
     
 
-<form action="actualizarlector.php" method="POST" >
+<form action="actualizaredi.php" method="POST" >
 
 
 
@@ -62,7 +63,7 @@ echo "conexion exitosa";
 	
     <ul>
        
-        <center><li><h2>Actualizacion de Lector</h2></li></center>
+        <center><li><h2>Actualizacion de Editorial</h2></li></center>
 	</ul>
     <br class="clearfloat" />
     
@@ -81,22 +82,27 @@ echo "conexion exitosa";
                         <tr>
 						
                             <td>
-							Rut<input type="text" required name = "rut" 
-					placeholder = "ingrese rut a modificar"></td>
+					ID<input type="text" required name = "id_edit " 
+					placeholder = "ingrese id a modificar"></td>
 					<td>
-					Nombre Lector
+					Nombre Editorial
 					<input type="text" id="nombre"  
 					required name="nombre" value="
-					<?php echo $fila['nombre']; ?>"  />
+					<?php echo $row['nombre']; ?>"  />
 					</td>
 								
 					<td>
-					Nuevo Libro
-					<input type="text"  required name="libro"
-				 id="libro" value="<?php echo $fila['libro']; ?>" />
+					direccion
+					<input type="text"  required name="direccion"
+				 id="direccion" value="<?php echo $row['direccion']; ?>" />
                     
                                
-					</td>
+                    </td>
+                    <td>
+                    telefono 
+                    <input type="text"  required name="telefono"
+				 id="telefono" value="<?php echo $row['telefono']; ?>" /></td>
+                
 				
 
                         </tr>
@@ -115,10 +121,10 @@ echo "conexion exitosa";
 		    <tr>
 					<td colspan="4" align="center">
 			     	<center><input type="submit" value="Actualizar" class="submit" /></center>
-				   </td>
-				   <td>
-				   <button><a href="index.html">volver</a></button>
-				   </td>
+                   </td>
+                   <td>
+                   <button><a href="index.html">volver</a></button>
+                   </td>
 			</tr>
 			</article>
 

@@ -69,7 +69,7 @@
                 <p>nuestra biblioteca <br>
                      <h3>La casa de la memoria</h3></p>
     
-
+     
             </div> <!-- end header-nav__content -->
 
         </nav>  <!-- end header-nav -->
@@ -134,69 +134,90 @@
             <div class="col-full">
                 <article>
                     <center> <table>
+        
                         <tr>
-                        <td>
-                        <h2>datos</h2>
-                        <form action="./recibe.php" method="POST">
-                        <input type="text" name="nombre"
-                        placeholder="ingrese nombre"><br>
-                        <input type="text" name="libro"
-                        placeholder="ingrese nombre del libro"><br>
-                        <input type="text" name="dia"
-                        placeholder="ingrese dias de prestamo"><br>
-                        <br>
-                        <input type="radio" name="genero" value="Masculino">Masculino 
-                        <input type="radio" name="genero" value="Femenino">Femenino 
-                        <input type="radio" name="genero" value="Otro">Otro <br>
-                        </td>
-                        <td>
-                        <h2>Ingrese Categoria del libro</h2>
-                        <input type="checkbox" name="actividades[]" 
-                        value="aventura">Aventura<br>
-                        <input type="checkbox" name="actividades[]" 
-                        value="romance">Romance<br>
-                        <input type="checkbox" name="actividades[]" 
-                        value="suspenso">suspenso<br>
-                        <input type="checkbox" name="actividades[]" 
-                        value="terror">terror<br>
-                        </td>
+                            <td>
+                                    <h2>datos</h2>
+                                    <form action="./recibe.php" method="POST">
+                                        <input type="text" name="rut"
+                                        placeholder="ingrese rut"><br>
+
+                                        <input type="text" name="nombre"
+                                        placeholder="ingrese nombre"><br>
+                        
+                                        <input type="text" name="libro"
+                                        placeholder="ingrese nombre del libro"><br>
+                    
+                                        <input type="text" name="dia"
+                                        placeholder="ingrese dias de prestamo"><br>
+
+                                       
+
+                    <br>
+                                        <input type="radio" name="genero" value="Masculino">Masculino 
+                                        <input type="radio" name="genero" value="Femenino">Femenino 
+                                        <input type="radio" name="genero" value="Otro">Otro <br>
+        
+                            </td>
+                            <td>
+                                    <h2>Ingrese Categoria del libro</h2>
+            
+                
+                                    <input type="checkbox" name="actividades[]" 
+                                    value="aventura">Aventura<br>
+                    
+                                    <input type="checkbox" name="actividades[]" 
+                                    value="romance">Romance<br>
+                    
+                                    <input type="checkbox" name="actividades[]" 
+                                    value="suspenso">suspenso<br>
+                    
+                                    <input type="checkbox" name="actividades[]" 
+                                    value="terror">terror<br>
+                            </td>
                         </tr>
-                        <tr>
-                        <td>
-                        <h2>Ingrese comentario sobre el libro </h2>
-                        <textarea name="comentario" cols="30" rows="10">
-                        </textarea><br>
-                        <button type="submit" name="Enviar">Enviar</button>
-                        <button type="reset">Limpiar</button>
-                        </td>
-                        <td>
-                        <img src="img/icono.png" width="200" alt="">
-                        </td>
-                        </tr>
-                        </table></center>
+        <tr>
+            <td>
+                    <h2>Ingrese comentario sobre el libro </h2>
+                    <textarea name="comentario" cols="30" rows="10">
+                    </textarea><br>
+                    <button type="submit" name="Enviar">Enviar</button>
+                <button type="reset">Limpiar</button>
+                     
+            </td>
+            <td>
+               
+                <img src="img/icono.png" width="200" alt="">
+                
+               
+            </td>
+        
+        </tr>
+        </table></center>
         
                         </form>
                     </article>
 
 
                     <!--Ingresar empleado -->
-                    <div class="row section-header has-bottom-sep" data-aos="fade-up">
-                        <div class="col-full">
-                            <h3 class="subhead subhead--dark">Ingresar</h3>
-                            <h1 class="display-1 display-1--light">Ingrese Empleado</h1>
-                        </div>
-                    </div> <!-- end section-header -->
-            
-                    <div class="row about-desc" data-aos="fade-up">
-                        <div class="col-full">
+                    
                     <article>
+                            <div class="row section-header has-bottom-sep" data-aos="fade-up">
+                                    <div class="col-full">
+                                        <h3 class="subhead subhead--dark">Ingresar</h3>
+                                        <h1 class="display-1 display-1--light">Ingrese Empleado</h1>
+                                    </div>
+                                </div> <!-- end section-header -->
+                        
+                                <div class="row about-desc" data-aos="fade-up">
+                                    <div class="col-full">
                         <center> <table>
             
                             <tr>
                                 <td>
                                         <h2>datos</h2>
                                         <form action="./recibeempleado.php" method="POST">
-                                            <input type="text" name="id"
+                                            <input type="text" name="id_e"
                                             placeholder="ingrese id"><br>
                             
                                             <input type="text" name="nombre"
@@ -257,7 +278,7 @@
                                 <td>
                                         <h2>datos</h2>
                                         <form action="./recibelibro.php" method="POST">
-                                            <input type="text" name="id"
+                                            <input type="text" name="id_l"
                                             placeholder="ingrese id"><br>
                             
                                             <input type="text" name="nombre"
@@ -291,6 +312,64 @@
             
                             </form>
                         </article>
+
+                        <!--Ingresar editorial-->
+                        <article>
+                                <div class="row section-header has-bottom-sep" data-aos="fade-up">
+                                        <div class="col-full">
+                                            <h3 class="subhead subhead--dark">Ingresar</h3>
+                                            <h1 class="display-1 display-1--light">Ingrese Editorial</h1>
+                                        </div>
+                                    </div> <!-- end section-header -->
+                            
+                                    <div class="row about-desc" data-aos="fade-up">
+                                        <div class="col-full">
+                            <center> <table>
+                
+                                <tr>
+                                    <td>
+                                            <h2>datos</h2>
+                                            <form action="./recibeeditorial.php" method="POST">
+                                                <input type="text" name="id_edit"
+                                                placeholder="ingrese id"><br>
+                                
+                                                <input type="text" name="nombre"
+                                                placeholder="ingrese nombre"><br>
+
+                                                <input type="text" name="direccion"
+                                                placeholder="ingrese direccion"><br>
+
+                                                <input type="text" name="telefono"
+                                                placeholder="ingrese telefono"><br>
+                            <br>
+                                             
+                                    </td>
+                             
+                                    <td >
+                       
+                                        <img src="img/icono.png" width="200" alt="">
+                                            
+                                           
+                                        </td>
+    
+                                </tr>
+                                <tr>
+                                    <td>
+    
+                                        <button type="submit">Enviar</button>
+                                    <button type="reset">Limpiar</button>
+                                         
+                                </td>
+                                </tr>
+                <tr>
+    
+                
+                
+                </tr>
+                </table></center>
+                
+                                </form>
+                            </article>
             </div>
         </div> <!-- end about-desc -->
 
@@ -310,19 +389,30 @@
                 <h1 class="display-2">Mostrar Lector</h1>
 
                 	<div>
-                        <a href="verdatos.php"></a>
-                        <button type="submit">Mostrar Lector</button>
+                       
+                          <button> <a class="nav-link" href="verdatos.php">Mostrar Lector</a></button> 
 			
                                         
-                    </div>			
+                    </div>		
+                    <div>
+                       
+                            <button> <a class="nav-link" href="mostrarempleado.php">Mostrar Empleado</a></button> 
+              
+                                          
+                      </div>			
+                      <div>
+                       
+                            <button> <a class="nav-link" href="mostrarlibro.php">Mostrar Libros</a></button> 
+              
+                                          
+                      </div>		
+                      <div>
+                       
+                        <button> <a class="nav-link" href="mostrareditorial.php">Mostrar Editorial</a></button> 
+          
+                                      
+                  </div>				
 				
-                    <a href="mostrar.php"></a>
-				
-                    <center><input type="submit" value="Mostrar Empleado" class="submit" /></center>
-                    				
-					<a href="mostrar.php"></a>
-				
-                    <center><input type="submit" value="Mostrar Libros" class="submit" /></center>
             </div>
         </div> <!-- end section-header -->
 
@@ -351,17 +441,34 @@
                     <h1 class="display-2 display-2--light">Actualizar</h1>
                 </div>
        
-                <a href="actualizar.php"></a>
-				
-                <center><input type="submit" value="actualizar Lector" class="submit" /></center>
-                                
-                <a href="actualizar.php"></a>
+                <div>
+                       
+                        <button> <a class="nav-link" href="actualizar.php">Actualizar Lector</a></button> 
+          
+                                      
+                  </div>
+                  <div>
+                       
+                        <button> <a class="nav-link" href="actualizarempleado.php">Actualizar Empleado</a></button> 
+          
+                                      
+                  </div>
+                  <div>
+                       
+                        <button> <a class="nav-link" href="actualizarlibro.php">Actualizar Libros</a></button> 
+          
+                                      
+                  </div>
+                  <div>
+                       
+                        <button> <a class="nav-link" href="actualizareditorial.php">Actualizar Editorial</a></button> 
+          
+                                      
+                  </div>
+                
+                
             
-                <center><input type="submit" value="actualizar Empleado" class="submit" /></center>
-                                
-                <a href="actualizar.php"></a>
-            
-                <center><input type="submit" value="actualizar Libros" class="submit" /></center>
+             
     </section> 
 
 

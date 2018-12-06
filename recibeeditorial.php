@@ -1,10 +1,9 @@
 
     <?php
-             $id_l = $_POST["id_l"];
+             $id_edit  = $_POST["id_edit "];
              $nombre = $_POST["nombre"];
-             $direccion = $_POST["stock"];
-             $telefono= $_POST["estado"];
-             $telefono = $_POST["comentario"];
+             $direccion = $_POST["direccion"];
+             $telefono= $_POST["telefono"];
              
     ?>
 
@@ -29,8 +28,8 @@
       
 
         <?php
-         $sql = "INSERT into libro(id_l, nombre, stock, estado, comentario) values(
-            '$id_l', '$nombre','$stock' ,'$estado', '$comentario')";
+         $sql = "INSERT into editorial(id_edit , nombre, direccion, telefono) values(
+            '$id_edit ', '$nombre','$direccion' ,'$telefono')";
 
         if($conexion -> query($sql) == TRUE){
 

@@ -19,16 +19,14 @@
             </thead>
             <tbody>
                 <tr>
-                    <td>RUT</td>
+                    <td>ID</td>
                     <td>NOMBRE</td>
-                    <td>LIBRO</td>
-                    <td>DIA</td>
-                    <td>GENERO</td>
-                    <td>ACTIVIDADES</td>
+                    <td>STOCK</td>
+                    <td>ESTADO</td>
                     <td>COMENTARIO</td>
                 </tr>
     <header>
-        <center><h1>Lectores</h1></center>
+       <center> <h1>Libros</h1></center>
     </header>
     <nav></nav>
 <section>
@@ -48,7 +46,7 @@
                  die("conexión fallida! ".$conexion -> connect_error);
              }
 
-             $sql = "SELECT * FROM lector";
+             $sql = "SELECT * FROM libro";
              $resultados = $conexion -> query($sql);
 
              if($resultados -> num_rows > 0){
@@ -58,17 +56,15 @@
                 while($row = $resultados -> fetch_assoc()){
                     ?>
                     <tr>
-                    <td> <?php echo $row["rut"] ?> </td>
+                    <td> <?php echo $row["id_l"] ?> </td>
                 
                      <td><?php echo $row["nombre"] ?> </td>
-                     <td> <?php echo $row["libro"] ?></td>
-                     <td><?php echo $row["dia"] ?></td>
-                     <td> <?php echo $row["genero"]?></td>
-                     <td> <?php print $row["actividades"]?></td>
+                     <td> <?php echo $row["stock"] ?></td>
+                     <td><?php echo $row["estado"] ?></td>
                      <td><?php echo $row["comentario"]?>
                      <br>
                              
-                     <td><a href="eliminar.php?rut=<?php echo $row['rut']; ?>">Eliminar</a> </td>
+                     <td><a href="eliminar.php?id_l=<?php echo $row['id_l']; ?>">Eliminar</a> </td>
                      </td>
                      
                                          </tr>
@@ -81,9 +77,8 @@
              $conexion -> close();
    
              ?>
-         
+             
     </article>
-  
 </section>
 </body>
 </html>
