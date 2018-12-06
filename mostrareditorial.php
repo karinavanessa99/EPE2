@@ -56,7 +56,7 @@
                 while($row = $resultados -> fetch_assoc()){
                     ?>
                     <tr>
-                    <td> <?php echo $row["id_edit "] ?> </td>
+                    <td> <?php echo $row["id_edit"] ?> </td>
                 
                      <td><?php echo $row["nombre"] ?> </td>
                      <td> <?php echo $row["direccion"] ?></td>

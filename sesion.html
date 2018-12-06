@@ -1,26 +1,4 @@
 
-   <?php
-   $servidor="localhost";
-   $usuario="root";
-   $Contrasenia="root";
-   $nombreBD="biblioteca";
-   
-   $conexion =new mysqli($servidor,$usuario,$Contrasenia,$nombreBD);
-
-    if($conexion -> connect_error){#conexion.connect.error()
-    die("conexion fallida".$conexion -> connect_error);
-}
-echo'<script>
-alert("Conexion Exitosa")
-</script>';
-
-{
-    header("Location: index.html");
-        
-}
-$conexion->close();    
-}
-?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -53,8 +31,13 @@ $conexion->close();
  
                     <p><label>Contraseña:</label></p>
                         <input name="contrasenia" type="password" id="contrasenia" placeholder="Ingresa Password" required=""></p>
- 
-                    <p id="bot"><input type="submit" id="submit" name="submit" value="Ingresar" class="boton"></p>
+                        <div>
+                       
+                            <button> <a class="nav-link" href="index.html">Ingresar</a></button> 
+              
+                                          
+                      </div>				
+                    
                 </form>
             </div><!--fin cuerpo-->
  

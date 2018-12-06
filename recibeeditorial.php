@@ -1,6 +1,6 @@
 
     <?php
-             $id_edit  = $_POST["id_edit "];
+             $id_edit  = $_POST["id_edit"];
              $nombre = $_POST["nombre"];
              $direccion = $_POST["direccion"];
              $telefono= $_POST["telefono"];
